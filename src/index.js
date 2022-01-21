@@ -22,7 +22,13 @@ const onClickAdd = () => {
   const completeButton = document.createElement("button");
   completeButton.innerText = "完了";
   completeButton.addEventListener("click", () => {
-    alert("完了");
+    const completeTarget = completeButton.parentNode;
+    document.getElementById("incomplete-list").removeChild(completeTarget);
+    const div = document.createElement("div");
+    div.className = "list-row";
+    const complete_li = document.createElement("li");
+    // div.appendChild(complete_li);
+    // document.getElementById("complete-list").appendChild(div);
   });
   //buttun　完了の作成
   const deleteButton = document.createElement("button");
